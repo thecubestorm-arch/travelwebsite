@@ -5,12 +5,14 @@ type BuildMetadataInput = {
   title: string;
   description: string;
   path?: string;
+  keywords?: string[];
 };
 
 export function buildMetadata({
   title,
   description,
   path = "",
+  keywords = [],
 }: BuildMetadataInput): Metadata {
   const normalizedPath = path.startsWith("/") ? path : `/${path}`;
   const canonical =
@@ -19,6 +21,7 @@ export function buildMetadata({
   return {
     title,
     description,
+    keywords,
     alternates: {
       canonical,
     },

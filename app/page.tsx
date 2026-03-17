@@ -1,5 +1,7 @@
 import { ContentCard } from "@/components/content-card";
 import { CTASection } from "@/components/cta-section";
+import { ChecklistSection } from "@/components/checklist-section";
+import { FAQSection } from "@/components/faq-section";
 import { HeroSection } from "@/components/hero-section";
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { SectionHeading } from "@/components/section-heading";
@@ -15,8 +17,15 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Travel China Without Confusion",
   description:
-    "Start planning your first China trip with practical prep guides, destination overviews, and itinerary ideas built for international travelers.",
+    "Start planning your first China trip with mobile-friendly prep guides, destination overviews, and practical itinerary ideas for international travelers.",
   path: "/",
+  keywords: [
+    "China travel guide",
+    "first trip to China",
+    "China itinerary",
+    "China travel planning",
+    "travel China first time",
+  ],
 });
 
 export default function HomePage() {
@@ -32,6 +41,26 @@ export default function HomePage() {
             label: "Explore Destinations",
             href: "/destinations",
           }}
+        />
+
+        <ChecklistSection
+          eyebrow="Quick Start"
+          title="Start with the three decisions that shape the whole trip"
+          description="If you are planning on your phone, this is the fastest way to make meaningful progress. Handle the basics first, narrow the cities second, and only then build the route."
+          items={[
+            {
+              title: "Fix your setup",
+              body: "Get apps, payments, and connectivity sorted before departure so your arrival day feels controlled rather than reactive.",
+            },
+            {
+              title: "Choose the right cities",
+              body: "Pick destinations based on pace, travel energy, and what kind of first China experience you actually want.",
+            },
+            {
+              title: "Use a realistic route",
+              body: "Build an itinerary around manageable transfer times so the trip stays exciting without becoming exhausting.",
+            },
+          ]}
         />
 
         <section className="space-y-8">
@@ -99,12 +128,35 @@ export default function HomePage() {
           </div>
         </section>
 
+        <FAQSection
+          eyebrow="Common Questions"
+          title="What first-time travelers usually need answered early"
+          description="These are the practical questions that often decide whether a first China trip feels smooth or stressful."
+          items={[
+            {
+              question: "What should I prepare first before traveling to China?",
+              answer:
+                "Start with the basics that affect your first 48 hours: payments, essential apps, connectivity, saved hotel details, and a realistic arrival plan.",
+            },
+            {
+              question: "How many cities should I include on a first China trip?",
+              answer:
+                "Most first-time travelers are better served by two to four core stops, because that keeps transfer time under control and leaves enough energy to actually enjoy each destination.",
+            },
+            {
+              question: "Is Trail of China meant to be a blog or a planning tool?",
+              answer:
+                "The site is built as a practical planning tool first, with destination guidance, prep checklists, and route advice that help travelers make decisions rather than just read inspiration.",
+            },
+          ]}
+        />
+
         <CTASection
           eyebrow="Lead Magnet"
-          title="Turn this section into your first subscriber offer"
-          description="Use this area for a printable arrival checklist, starter itinerary, or practical China prep guide once you're ready to capture leads."
-          primaryCta={{ label: "CTA Placeholder", href: "/travel-help" }}
-          secondaryText="For now, it works as a visual placeholder without adding any backend complexity."
+          title="Offer something genuinely useful, not just another signup"
+          description="The best lead magnet for this audience is a compact planning asset they can actually use on mobile, such as a first-week checklist, payment setup guide, or arrival-day cheat sheet."
+          primaryCta={{ label: "See Travel Help", href: "/travel-help" }}
+          secondaryText="This keeps the page customer-first now while still leaving room for lead capture later."
         />
       </LayoutWrapper>
     </div>

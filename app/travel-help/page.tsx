@@ -1,4 +1,5 @@
 import { CTASection } from "@/components/cta-section";
+import { ChecklistSection } from "@/components/checklist-section";
 import { InfoColumns } from "@/components/info-columns";
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
@@ -9,6 +10,13 @@ export const metadata = buildMetadata({
   description:
     "Get practical China travel help for arrival-day setup, transport confidence, and backup planning.",
   path: "/travel-help",
+  keywords: [
+    "China travel help",
+    "China arrival tips",
+    "China travel backup plan",
+    "China transport guide",
+    "first time China travel advice",
+  ],
 });
 
 const helpSections = [
@@ -38,11 +46,30 @@ export default function TravelHelpPage() {
         title="Practical support for the parts of China travel that feel uncertain"
         description="Use this section when you need to strengthen the practical side of your trip, especially around arrival-day logistics, transport confidence, and backup planning."
       />
+      <ChecklistSection
+        eyebrow="High Value Support"
+        title="If something feels uncertain, secure these basics first"
+        description="This is the kind of customer value the site should keep prioritizing: immediate actions that reduce risk and make travel feel more manageable."
+        items={[
+          {
+            title: "Save your first stop details",
+            body: "Keep your hotel name, address, and booking screenshot available in both your phone gallery and one offline note.",
+          },
+          {
+            title: "Carry one payment backup",
+            body: "Even if mobile payments are your main plan, you should still have one secondary card or small backup cash option ready.",
+          },
+          {
+            title: "Protect the day from one failure",
+            body: "If your main app, card, or connection stops working, your trip should still continue with screenshots, offline notes, and one alternative route.",
+          },
+        ]}
+      />
       <InfoColumns items={helpSections} />
       <CTASection
         eyebrow="Placeholder CTA"
-        title="Add your first lead magnet or support offer here later"
-        description="This section is intentionally ready for a future checklist, downloadable guide, or simple service offer without changing the page structure."
+        title="Turn your best practical advice into a customer asset later"
+        description="This section is intentionally ready for a future downloadable checklist, planning pack, or support offer without changing the page structure."
         primaryCta={{ label: "Explore Homepage", href: "/" }}
       />
     </LayoutWrapper>

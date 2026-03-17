@@ -5,7 +5,7 @@ import { LayoutWrapper } from "@/components/layout-wrapper";
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[rgba(245,241,234,0.78)] backdrop-blur-xl">
-      <LayoutWrapper className="flex flex-col gap-4 py-4 md:flex-row md:items-center md:justify-between">
+      <LayoutWrapper className="flex flex-col gap-4 py-3 md:flex-row md:items-center md:justify-between md:py-4">
         <Link href="/" className="flex flex-col">
           <span className="font-serif text-2xl leading-none tracking-[0.08em] text-[var(--foreground)]">
             Trail of China
@@ -16,13 +16,13 @@ export function Header() {
         </Link>
         <nav
           aria-label="Primary"
-          className="flex w-full flex-wrap gap-2 md:w-auto md:justify-end"
+          className="-mx-1 flex w-[calc(100%+0.5rem)] gap-2 overflow-x-auto px-1 pb-1 md:mx-0 md:w-auto md:flex-wrap md:justify-end md:overflow-visible md:px-0 md:pb-0"
         >
           {siteConfig.navItems.map((item) => (
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-4 py-2 text-sm font-medium text-[var(--muted)] hover:bg-white/70 hover:text-[var(--foreground)]"
+              className="shrink-0 rounded-full border border-transparent bg-white/60 px-4 py-2.5 text-sm font-medium text-[var(--muted)] hover:border-[var(--line)] hover:bg-white hover:text-[var(--foreground)] md:bg-transparent md:py-2"
             >
               {item.label}
             </Link>
