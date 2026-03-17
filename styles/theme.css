@@ -1,0 +1,15 @@
+:root {
+  --background: #f5f1ea;
+  --background-strong: #ebe4d8;
+  --surface: rgba(255, 252, 247, 0.86);
+  --surface-strong: #fffaf3;
+  --foreground: #1f2933;
+  --muted: #5d6a73;
+  --line: rgba(31, 41, 51, 0.1);
+  --accent: #af5d32;
+  --accent-strong: #8f431c;
+  --accent-soft: rgba(175, 93, 50, 0.12);
+  --shadow-soft: 0 22px 60px rgba(40, 33, 26, 0.08);
+  --shadow-card: 0 16px 40px rgba(50, 41, 30, 0.09);
+  --radius-xl: 2rem;
+}
