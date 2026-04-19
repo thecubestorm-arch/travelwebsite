@@ -362,6 +362,7 @@ export const preplannedTripCards: PreviewCard[] = [
       "The classic corridor - two iconic cities connected by the world's fastest trains.",
     href: "/plan-your-trip/preplanned-trips",
     tag: "Coming Soon",
+    comingSoon: true,
   },
   {
     title: "1 Week: Southwest China",
@@ -369,6 +370,7 @@ export const preplannedTripCards: PreviewCard[] = [
       "Chengdu, Chongqing, and natural landscapes for travelers who want something beyond the big cities.",
     href: "/plan-your-trip/preplanned-trips",
     tag: "Coming Soon",
+    comingSoon: true,
   },
   {
     title: "Long Weekend: Shanghai",
@@ -376,6 +378,7 @@ export const preplannedTripCards: PreviewCard[] = [
       "Make the most of 3-4 days in China's most international city.",
     href: "/plan-your-trip/preplanned-trips",
     tag: "Coming Soon",
+    comingSoon: true,
   },
   {
     title: "Historical China: Xi'an & Beijing",
@@ -383,6 +386,7 @@ export const preplannedTripCards: PreviewCard[] = [
       "Two weeks focused on ancient sites, including the Terracotta Army and the Great Wall.",
     href: "/plan-your-trip/preplanned-trips",
     tag: "Coming Soon",
+    comingSoon: true,
   },
 ];
 
