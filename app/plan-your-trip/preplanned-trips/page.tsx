@@ -27,10 +27,10 @@ export default function PreplannedTripsPage() {
         ))}
       </section>
       <CTASection
-        eyebrow="Build Your Own"
-        title="Want a route tailored to your preferences?"
-        description="The travel planner lets you choose your cities, group size, and travel style to get a personalised suggestion."
-        primaryCta={{ label: "Travel Planner", href: "/plan-your-trip/travel-planner" }}
+        eyebrow="Not Ready to Commit?"
+        title="Build your own route instead"
+        description="The travel planner lets you choose cities, travel pace, and route style — so you can build something that fits exactly what you want."
+        primaryCta={{ label: "Open Travel Planner", href: "/plan-your-trip/travel-planner" }}
       />
     </LayoutWrapper>
   );

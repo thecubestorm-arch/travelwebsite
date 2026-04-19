@@ -30,15 +30,20 @@ export function Footer() {
         </div>
         <div className="section-shell rounded-[1.5rem] p-6">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[var(--muted)]">
-            CTA Placeholder
+            Start Planning
           </p>
           <h2 className="mt-3 font-serif text-2xl text-[var(--foreground)]">
-            Download the China arrival checklist
+            Ready to plan your trip?
           </h2>
           <p className="mt-3 text-sm leading-7 text-[var(--muted)]">
-            Reserve this space for your future lead magnet, service pitch, or
-            email sign-up.
+            Use the travel planner to build your own route, city by city.
           </p>
+          <Link
+            href="/plan-your-trip"
+            className="mt-5 inline-flex items-center rounded-full bg-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-white hover:-translate-y-0.5 hover:bg-[var(--accent-strong)]"
+          >
+            Plan Your Trip
+          </Link>
         </div>
       </LayoutWrapper>
     </footer>

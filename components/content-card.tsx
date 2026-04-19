@@ -7,6 +7,7 @@ type ContentCardProps = {
   description: string;
   href: string;
   thumbnail?: Thumbnail;
+  comingSoon?: boolean;
 };
 
 export function ContentCard({
@@ -15,6 +16,7 @@ export function ContentCard({
   description,
   href,
   thumbnail,
+  comingSoon,
 }: ContentCardProps) {
   return (
     <article className="section-shell group flex h-full flex-col justify-between rounded-[1.5rem] overflow-hidden sm:rounded-[1.75rem]">
@@ -38,12 +40,18 @@ export function ContentCard({
           <p className="mt-4 text-sm leading-7 text-[var(--muted)]">{description}</p>
         </div>
         <div className="mt-7">
-          <Link
-            href={href}
-            className="inline-flex min-h-11 items-center rounded-full border border-[var(--line)] bg-white/80 px-4 py-2 text-sm font-semibold text-[var(--foreground)] hover:-translate-y-0.5 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-          >
-            Read more
-          </Link>
+          {comingSoon ? (
+            <span className="inline-flex min-h-11 items-center rounded-full border border-[var(--line)] bg-white/50 px-4 py-2 text-sm font-semibold text-[var(--muted)]">
+              Coming Soon
+            </span>
+          ) : (
+            <Link
+              href={href}
+              className="inline-flex min-h-11 items-center rounded-full border border-[var(--line)] bg-white/80 px-4 py-2 text-sm font-semibold text-gray-900 text-[var(--foreground)] hover:-translate-y-0.5 hover:border-[var(--accent)] hover:text-[var(--accent)]"
+            >
+              Read more
+            </Link>
+          )}
         </div>
       </div>
     </article>

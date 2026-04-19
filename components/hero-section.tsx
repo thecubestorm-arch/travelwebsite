@@ -45,7 +45,7 @@ export function HeroSection({
           {secondaryCta ? (
             <Link
               href={secondaryCta.href}
-              className="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--line)] bg-white/65 px-6 py-3 text-sm font-semibold text-[var(--foreground)] hover:-translate-y-0.5 hover:bg-white"
+              className="inline-flex min-h-12 items-center justify-center rounded-full border border-[var(--line)] bg-white/65 px-6 py-3 text-sm font-semibold text-gray-900 text-[var(--foreground)] hover:-translate-y-0.5 hover:bg-white"
             >
               {secondaryCta.label}
             </Link>

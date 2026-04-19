@@ -9,6 +9,7 @@ export type PreviewCard = {
   href: string;
   tag: string;
   thumbnail?: Thumbnail;
+  comingSoon?: boolean;
 };
 
 // Homepage
@@ -41,6 +42,7 @@ export const top5DestinationsCards: PreviewCard[] = [
       "Home to the Terracotta Army and ancient city walls - the best base for China's ancient history.",
     href: "/destinations",
     tag: "Top Destination",
+    comingSoon: true,
   },
   {
     title: "Chengdu",
@@ -48,6 +50,7 @@ export const top5DestinationsCards: PreviewCard[] = [
       "Pandas, teahouses, and the best Sichuan food in the world. A relaxed city with enormous appeal.",
     href: "/destinations",
     tag: "Top Destination",
+    comingSoon: true,
   },
 ];
 
