@@ -44,7 +44,7 @@ export default function ShanghaiPage() {
       <div className="relative h-56 w-full overflow-hidden rounded-[1.75rem] sm:h-72 sm:rounded-[2rem]">
         <Image
           src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80"
-          alt="Shanghai skyline"
+          alt="The Bund riverfront and Shanghai skyline at dusk"
           fill
           className="object-cover"
           priority

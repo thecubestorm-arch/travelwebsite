@@ -45,7 +45,7 @@ export default function BeijingPage() {
       <div className="relative h-56 w-full overflow-hidden rounded-[1.75rem] sm:h-72 sm:rounded-[2rem]">
         <Image
           src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=80"
-          alt="Beijing skyline"
+          alt="The Great Wall of China stretching across green forested hills"
           fill
           className="object-cover"
           priority
