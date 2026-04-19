@@ -1,8 +1,14 @@
+export type Thumbnail = {
+  gradient: string;
+  icon: string;
+};
+
 export type PreviewCard = {
   title: string;
   description: string;
   href: string;
   tag: string;
+  thumbnail?: Thumbnail;
 };
 
 // Homepage
@@ -71,6 +77,10 @@ export const chinaBasicsCards: PreviewCard[] = [
       "The essential apps for payment, maps, travel bookings, communication, and staying connected.",
     href: "/china-basics/what-apps-to-use",
     tag: "China Basics",
+    thumbnail: {
+      gradient: "from-amber-300 via-orange-300 to-orange-400",
+      icon: "📱",
+    },
   },
   {
     title: "How to Get Internet",
@@ -78,6 +88,10 @@ export const chinaBasicsCards: PreviewCard[] = [
       "Your options for mobile data in China - eSIM vs physical SIM, what to buy, and when to buy it.",
     href: "/china-basics/how-to-get-internet",
     tag: "China Basics",
+    thumbnail: {
+      gradient: "from-sky-300 via-cyan-300 to-teal-400",
+      icon: "🌐",
+    },
   },
   {
     title: "How China Differs",
@@ -85,6 +99,10 @@ export const chinaBasicsCards: PreviewCard[] = [
       "Censorship, cultural norms, security standards, and passport rules that every visitor should understand.",
     href: "/china-basics/how-china-differs",
     tag: "China Basics",
+    thumbnail: {
+      gradient: "from-rose-300 via-red-300 to-red-400",
+      icon: "🏮",
+    },
   },
   {
     title: "How to Get Around",
@@ -92,6 +110,10 @@ export const chinaBasicsCards: PreviewCard[] = [
       "Trains, planes, subways, buses, and taxis - how transport works in China and what to use when.",
     href: "/china-basics/how-to-get-around",
     tag: "China Basics",
+    thumbnail: {
+      gradient: "from-emerald-300 via-green-300 to-teal-400",
+      icon: "🚄",
+    },
   },
 ];
 

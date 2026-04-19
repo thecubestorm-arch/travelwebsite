@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
 import { EsimPopup } from "@/components/esim-popup";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -23,6 +24,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="antialiased">
+        <ScrollToTop />
         <div className="relative min-h-screen">
           <Header />
           <main>{children}</main>
