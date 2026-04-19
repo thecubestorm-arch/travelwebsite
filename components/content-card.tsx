@@ -26,7 +26,7 @@ export function ContentCard({
           <div className="relative h-36 w-full shrink-0 overflow-hidden">
             <Image
               src={thumbnail.image}
-              alt={thumbnail.imageAlt ?? ""}
+              alt={thumbnail.imageAlt}
               fill
               className="object-cover"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
@@ -34,7 +34,7 @@ export function ContentCard({
           </div>
         ) : (
           <div
-            className={`flex items-center justify-center bg-gradient-to-br ${thumbnail.gradient} h-36 w-full shrink-0`}
+            className={`flex items-center justify-center bg-gradient-to-br ${thumbnail.gradient ?? ""} h-36 w-full shrink-0`}
           >
             <span className="text-5xl select-none" role="img">
               {thumbnail.icon}

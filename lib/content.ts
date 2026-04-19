@@ -1,9 +1,6 @@
-export type Thumbnail = {
-  gradient?: string;
-  icon?: string;
-  image?: string;       // Unsplash or other URL
-  imageAlt?: string;
-};
+export type Thumbnail =
+  | { gradient?: string; icon?: string; image?: never; imageAlt?: never }
+  | { gradient?: string; icon?: string; image: string; imageAlt: string };
 
 export type PreviewCard = {
   title: string;
