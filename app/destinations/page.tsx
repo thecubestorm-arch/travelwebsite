@@ -29,7 +29,7 @@ export default function DestinationsPage() {
         eyebrow="Route Planning"
         title="Turn your city shortlist into a realistic itinerary"
         description="Once you know which places fit your first trip, use a route that keeps travel time manageable and energy levels realistic."
-        primaryCta={{ label: "View Itineraries", href: "/itineraries" }}
+        primaryCta={{ label: "Plan Your Trip", href: "/plan-your-trip" }}
       />
     </LayoutWrapper>
   );

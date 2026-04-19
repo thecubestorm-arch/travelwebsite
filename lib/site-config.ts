@@ -1,3 +1,10 @@
+export type NavItem = {
+  label: string;
+  href: string;
+  disabled?: boolean;
+  badge?: string;
+};
+
 export const siteConfig = {
   name: "Trail of China",
   domain: "trailofchina.com",
@@ -5,17 +12,15 @@ export const siteConfig = {
   description:
     "Practical China travel guides, destination primers, and first-trip itineraries for international travelers.",
   navItems: [
-    { label: "Plan Your Trip", href: "/plan-your-trip" },
+    { label: "Home", href: "/" },
+    { label: "China Basics", href: "/china-basics" },
     { label: "Destinations", href: "/destinations" },
-    { label: "Itineraries", href: "/itineraries" },
-    { label: "Travel Help", href: "/travel-help" },
-  ],
+    { label: "Plan Your Trip", href: "/plan-your-trip" },
+    { label: "Interactive Map", href: "/interactive-map", disabled: true, badge: "Coming Soon" },
+  ] as NavItem[],
   footerLinks: [
-    { label: "Plan Your Trip", href: "/plan-your-trip" },
+    { label: "China Basics", href: "/china-basics" },
     { label: "Destinations", href: "/destinations" },
-    { label: "Itineraries", href: "/itineraries" },
-    { label: "Travel Help", href: "/travel-help" },
+    { label: "Plan Your Trip", href: "/plan-your-trip" },
   ],
 };
-
-export type NavItem = (typeof siteConfig.navItems)[number];

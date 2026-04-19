@@ -43,7 +43,10 @@ export default function ChongqingPage() {
         eyebrow="Keep Planning"
         title="Now shape a route around your strongest destination picks"
         description="Once you know which cities deserve space on the itinerary, use a route that keeps the experience practical and exciting."
-        primaryCta={{ label: "See Itinerary", href: "/itineraries/2-weeks-in-china" }}
+        primaryCta={{
+          label: "See Itinerary",
+          href: "/plan-your-trip/preplanned-trips/2-weeks-in-china",
+        }}
       />
     </LayoutWrapper>
   );

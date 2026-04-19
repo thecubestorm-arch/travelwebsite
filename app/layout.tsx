@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import type { ReactNode } from "react";
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header";
+import { EsimPopup } from "@/components/esim-popup";
 import { siteConfig } from "@/lib/site-config";
 import "./globals.css";
 
@@ -26,6 +27,7 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
+          <EsimPopup />
         </div>
       </body>
     </html>

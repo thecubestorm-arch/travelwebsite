@@ -1,7 +1,9 @@
+import { ContentCard } from "@/components/content-card";
 import { CTASection } from "@/components/cta-section";
 import { InfoColumns } from "@/components/info-columns";
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
+import { shanghaiSubpageCards } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -39,11 +41,16 @@ export default function ShanghaiPage() {
         description="If you want a first China city that feels efficient, stylish, and relatively easy to navigate, Shanghai is one of the strongest places to begin."
       />
       <InfoColumns items={shanghaiSections} />
+      <section className="grid gap-6 sm:grid-cols-2">
+        {shanghaiSubpageCards.map((card) => (
+          <ContentCard key={card.href} {...card} />
+        ))}
+      </section>
       <CTASection
         eyebrow="Compare Cities"
         title="Want something bolder and more dramatic?"
-        description="Chongqing offers a very different urban experience, with layered geography, richer visual intensity, and a stronger sense of raw scale."
-        primaryCta={{ label: "See Chongqing", href: "/destinations/chongqing" }}
+        description="Beijing offers the full sweep of Chinese history alongside modern energy — a natural second stop after Shanghai."
+        primaryCta={{ label: "See Beijing", href: "/destinations/beijing" }}
       />
     </LayoutWrapper>
   );
