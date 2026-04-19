@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ContentCard } from "@/components/content-card";
 import { CTASection } from "@/components/cta-section";
 import { InfoColumns } from "@/components/info-columns";
@@ -41,6 +42,16 @@ export default function BeijingPage() {
         title="Beijing"
         description="China's capital is the country's most historically rich city. The Forbidden City, the Great Wall, and centuries of imperial culture — Beijing delivers a depth of experience that no other destination matches."
       />
+      <div className="relative h-56 w-full overflow-hidden rounded-[1.75rem] sm:h-72 sm:rounded-[2rem]">
+        <Image
+          src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=80"
+          alt="Beijing skyline"
+          fill
+          className="object-cover"
+          priority
+          sizes="(max-width: 768px) 100vw, 80vw"
+        />
+      </div>
       <InfoColumns items={beijingSections} />
       <section className="grid gap-6 sm:grid-cols-2">
         {beijingSubpageCards.map((card) => (

@@ -20,6 +20,10 @@ export const top5DestinationsCards: PreviewCard[] = [
       "China's most international city - easy arrivals, world-class food, and a skyline that announces what's coming.",
     href: "/destinations/shanghai",
     tag: "Top Destination",
+    thumbnail: {
+      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80",
+      imageAlt: "Shanghai river and city skyline at dusk",
+    },
   },
   {
     title: "Beijing",
@@ -27,6 +31,10 @@ export const top5DestinationsCards: PreviewCard[] = [
       "The capital, the Great Wall, the hutongs. A must for first-timers who want to feel the full weight of Chinese history.",
     href: "/destinations/beijing",
     tag: "Top Destination",
+    thumbnail: {
+      image: "https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=800&q=80",
+      imageAlt: "Beijing Great Wall stretching across green hills",
+    },
   },
   {
     title: "Chongqing",
@@ -34,6 +42,10 @@ export const top5DestinationsCards: PreviewCard[] = [
       "A bold, hilly river city known for fiery hotpot, dramatic skyline views, and unique urban terrain.",
     href: "/destinations/chongqing",
     tag: "Top Destination",
+    thumbnail: {
+      image: "https://images.unsplash.com/photo-1570197788417-0e82375c9371?w=800&q=80",
+      imageAlt: "Chongqing city skyline at night",
+    },
   },
   {
     title: "Xi'an",
@@ -42,6 +54,10 @@ export const top5DestinationsCards: PreviewCard[] = [
     href: "/destinations",
     tag: "Top Destination",
     comingSoon: true,
+    thumbnail: {
+      image: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071?w=800&q=80",
+      imageAlt: "Xi'an ancient city wall",
+    },
   },
   {
     title: "Chengdu",
@@ -50,6 +66,10 @@ export const top5DestinationsCards: PreviewCard[] = [
     href: "/destinations",
     tag: "Top Destination",
     comingSoon: true,
+    thumbnail: {
+      image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80",
+      imageAlt: "Giant panda in Chengdu",
+    },
   },
 ];
 

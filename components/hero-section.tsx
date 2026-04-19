@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 
 type HeroSectionProps = {
@@ -23,6 +24,13 @@ export function HeroSection({
 }: HeroSectionProps) {
   return (
     <section className="relative overflow-hidden rounded-[1.75rem] border border-[var(--line)] bg-[linear-gradient(135deg,rgba(255,250,243,0.96),rgba(235,228,216,0.94))] px-5 py-10 shadow-[var(--shadow-soft)] sm:rounded-[2rem] sm:px-10 sm:py-14 lg:px-14 lg:py-20">
+      <Image
+        src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1600&q=70"
+        alt=""
+        fill
+        className="object-cover opacity-[0.06] select-none pointer-events-none"
+        priority
+      />
       <div className="absolute right-0 top-0 h-56 w-56 rounded-full bg-[rgba(175,93,50,0.11)] blur-3xl" />
       <div className="absolute bottom-0 left-0 h-48 w-48 rounded-full bg-white/70 blur-3xl" />
       <div className="relative max-w-3xl">

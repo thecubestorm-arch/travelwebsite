@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ContentCard } from "@/components/content-card";
 import { CTASection } from "@/components/cta-section";
 import { InfoColumns } from "@/components/info-columns";
@@ -40,6 +41,16 @@ export default function ShanghaiPage() {
         title="Shanghai"
         description="If you want a first China city that feels efficient, stylish, and relatively easy to navigate, Shanghai is one of the strongest places to begin."
       />
+      <div className="relative h-56 w-full overflow-hidden rounded-[1.75rem] sm:h-72 sm:rounded-[2rem]">
+        <Image
+          src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&q=80"
+          alt="Shanghai skyline"
+          fill
+          className="object-cover"
+          priority
+          sizes="(max-width: 768px) 100vw, 80vw"
+        />
+      </div>
       <InfoColumns items={shanghaiSections} />
       <section className="grid gap-6 sm:grid-cols-2">
         {shanghaiSubpageCards.map((card) => (
