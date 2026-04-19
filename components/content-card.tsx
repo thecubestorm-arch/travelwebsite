@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Thumbnail } from "@/lib/content";
 
 type ContentCardProps = {
@@ -21,13 +22,25 @@ export function ContentCard({
   return (
     <article className="section-shell group flex h-full flex-col justify-between rounded-[1.5rem] overflow-hidden sm:rounded-[1.75rem]">
       {thumbnail && (
-        <div
-          className={`flex items-center justify-center bg-gradient-to-br ${thumbnail.gradient} h-36 w-full shrink-0`}
-        >
-          <span className="text-5xl select-none" role="img">
-            {thumbnail.icon}
-          </span>
-        </div>
+        thumbnail.image ? (
+          <div className="relative h-36 w-full shrink-0 overflow-hidden">
+            <Image
+              src={thumbnail.image}
+              alt={thumbnail.imageAlt ?? ""}
+              fill
+              className="object-cover"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw"
+            />
+          </div>
+        ) : (
+          <div
+            className={`flex items-center justify-center bg-gradient-to-br ${thumbnail.gradient} h-36 w-full shrink-0`}
+          >
+            <span className="text-5xl select-none" role="img">
+              {thumbnail.icon}
+            </span>
+          </div>
+        )
       )}
       <div className="flex flex-col flex-1 justify-between p-5 sm:p-6">
         <div>
