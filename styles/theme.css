@@ -1,6 +1,7 @@
 :root {
   --background: #f5f1ea;
   --background-strong: #ebe4d8;
+  --background-section: #eee8dc;
   --surface: rgba(255, 252, 247, 0.86);
   --surface-strong: #fffaf3;
   --foreground: #1f2933;
@@ -11,5 +12,6 @@
   --accent-soft: rgba(175, 93, 50, 0.12);
   --shadow-soft: 0 22px 60px rgba(40, 33, 26, 0.08);
   --shadow-card: 0 16px 40px rgba(50, 41, 30, 0.09);
+  --shadow-hover: 0 28px 70px rgba(40, 33, 26, 0.14);
   --radius-xl: 2rem;
 }

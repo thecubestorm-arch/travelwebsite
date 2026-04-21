@@ -19,9 +19,9 @@ body {
     "Helvetica Neue",
     sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(255, 255, 255, 0.95), transparent 28%),
-    radial-gradient(circle at top right, rgba(175, 93, 50, 0.08), transparent 22%),
-    linear-gradient(180deg, #f8f4ee 0%, var(--background) 48%, #f1ebe1 100%);
+    radial-gradient(circle at top left, rgba(255, 255, 255, 0.98), transparent 30%),
+    radial-gradient(circle at top right, rgba(175, 93, 50, 0.10), transparent 24%),
+    linear-gradient(180deg, #f9f5ef 0%, var(--background) 48%, #ede6da 100%);
   color: var(--foreground);
 }
 
@@ -65,6 +65,15 @@ a {
   background:
     linear-gradient(180deg, rgba(255, 250, 243, 0.92), rgba(255, 252, 247, 0.82));
   box-shadow: var(--shadow-card);
+  transition: box-shadow 200ms ease;
+}
+
+.section-shell:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.section-alt {
+  background: var(--background-section);
 }
 
 .accent-ring {
