@@ -2,6 +2,7 @@ import { CTASection } from "@/components/cta-section";
 import { InfoColumns } from "@/components/info-columns";
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -34,6 +35,7 @@ const sections = [
 export default function ShanghaiEatPage() {
   return (
     <LayoutWrapper className="space-y-12 py-12 sm:space-y-16 sm:py-16">
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Destinations", href: "/destinations" }, { label: "Shanghai", href: "/destinations/shanghai" }, { label: "Where & What to Eat" }]} />
       <PageIntro
         eyebrow="Shanghai"
         title="Where and What to Eat in Shanghai"

@@ -1,6 +1,7 @@
 import { TravelPlannerForm } from "@/components/travel-planner-form";
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -14,6 +15,7 @@ export const metadata = buildMetadata({
 export default function TravelPlannerPage() {
   return (
     <LayoutWrapper className="space-y-12 py-12 sm:space-y-16 sm:py-16">
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Plan Your Trip", href: "/plan-your-trip" }, { label: "Travel Planner" }]} />
       <PageIntro
         eyebrow="Plan Your Trip"
         title="Build your personalised China route"

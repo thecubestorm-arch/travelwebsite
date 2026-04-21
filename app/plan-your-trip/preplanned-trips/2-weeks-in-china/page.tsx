@@ -2,6 +2,7 @@ import { CTASection } from "@/components/cta-section";
 import { InfoColumns } from "@/components/info-columns";
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -34,6 +35,7 @@ const itinerarySections = [
 export default function TwoWeeksInChinaPage() {
   return (
     <LayoutWrapper className="space-y-12 py-12 sm:space-y-16 sm:py-16">
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Plan Your Trip", href: "/plan-your-trip" }, { label: "Preplanned Trips", href: "/plan-your-trip/preplanned-trips" }, { label: "2 Weeks in China" }]} />
       <PageIntro
         eyebrow="Preplanned Trip"
         title="2 Weeks in China"

@@ -3,6 +3,7 @@ import { CTASection } from "@/components/cta-section";
 import { FAQSection } from "@/components/faq-section";
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { chinaBasicsCards } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 
@@ -22,6 +23,7 @@ export const metadata = buildMetadata({
 export default function ChinaBasicsPage() {
   return (
     <LayoutWrapper className="space-y-12 py-12 sm:space-y-16 sm:py-16">
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "China Basics" }]} />
       <PageIntro
         eyebrow="China Basics"
         title="Everything you need to know before you land"

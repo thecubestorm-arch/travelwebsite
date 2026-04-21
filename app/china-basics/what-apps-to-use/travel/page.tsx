@@ -2,6 +2,7 @@ import { CTASection } from "@/components/cta-section";
 import { InfoColumns } from "@/components/info-columns";
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -34,6 +35,7 @@ const sections = [
 export default function TravelAppsPage() {
   return (
     <LayoutWrapper className="space-y-12 py-12 sm:space-y-16 sm:py-16">
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "China Basics", href: "/china-basics" }, { label: "What Apps to Use", href: "/china-basics/what-apps-to-use" }, { label: "Travel Apps" }]} />
       <PageIntro
         eyebrow="What Apps to Use"
         title="Travel Booking Apps for China"

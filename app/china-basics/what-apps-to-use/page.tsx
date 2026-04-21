@@ -2,6 +2,7 @@ import { ContentCard } from "@/components/content-card";
 import { CTASection } from "@/components/cta-section";
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { whatAppsCards } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 
@@ -20,6 +21,7 @@ export const metadata = buildMetadata({
 export default function WhatAppsToUsePage() {
   return (
     <LayoutWrapper className="space-y-12 py-12 sm:space-y-16 sm:py-16">
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "China Basics", href: "/china-basics" }, { label: "What Apps to Use" }]} />
       <PageIntro
         eyebrow="China Basics"
         title="What Apps to Use in China"

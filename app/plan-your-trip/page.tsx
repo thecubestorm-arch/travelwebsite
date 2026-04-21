@@ -3,6 +3,7 @@ import { ChecklistSection } from "@/components/checklist-section";
 import { CTASection } from "@/components/cta-section";
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -38,6 +39,7 @@ const planCards = [
 export default function PlanYourTripPage() {
   return (
     <LayoutWrapper className="space-y-12 py-12 sm:space-y-16 sm:py-16">
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Plan Your Trip" }]} />
       <PageIntro
         eyebrow="Plan Your Trip"
         title="Shape your perfect China route"

@@ -2,6 +2,7 @@ import { CTASection } from "@/components/cta-section";
 import { InfoColumns } from "@/components/info-columns";
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { buildMetadata } from "@/lib/seo";
 
 export const metadata = buildMetadata({
@@ -34,6 +35,7 @@ const sections = [
 export default function TrainPage() {
   return (
     <LayoutWrapper className="space-y-12 py-12 sm:space-y-16 sm:py-16">
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "China Basics", href: "/china-basics" }, { label: "How to Get Around", href: "/china-basics/how-to-get-around" }, { label: "Train" }]} />
       <PageIntro
         eyebrow="How to Get Around"
         title="Trains in China"

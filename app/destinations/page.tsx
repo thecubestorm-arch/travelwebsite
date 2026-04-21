@@ -2,6 +2,7 @@ import { ContentCard } from "@/components/content-card";
 import { CTASection } from "@/components/cta-section";
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
+import { Breadcrumb } from "@/components/breadcrumb";
 import { destinationCards } from "@/lib/content";
 import { buildMetadata } from "@/lib/seo";
 
@@ -15,6 +16,7 @@ export const metadata = buildMetadata({
 export default function DestinationsPage() {
   return (
     <LayoutWrapper className="space-y-12 py-12 sm:space-y-16 sm:py-16">
+      <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Destinations" }]} />
       <PageIntro
         eyebrow="Destinations"
         title="Choose places that fit your first China trip"
