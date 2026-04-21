@@ -1,12 +1,18 @@
+'use client'
+
 import Link from "next/link";
 import { siteConfig } from "@/lib/site-config";
 import { LayoutWrapper } from "@/components/layout-wrapper";
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
 
 export function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--line)] bg-[rgba(245,241,234,0.78)] backdrop-blur-xl">
       <LayoutWrapper className="flex flex-col gap-4 py-3 md:flex-row md:items-center md:justify-between md:py-4">
-        <Link href="/" className="flex flex-col">
+        <Link href="/" onClick={scrollToTop} className="flex flex-col">
           <span className="font-serif text-2xl leading-none tracking-[0.08em] text-[var(--foreground)]">
             Trail of China
           </span>
@@ -35,6 +41,7 @@ export function Header() {
               <Link
                 key={item.href}
                 href={item.href}
+                onClick={scrollToTop}
                 className="shrink-0 rounded-full border border-transparent bg-white/60 px-4 py-2.5 text-sm font-medium text-[var(--muted)] hover:border-[var(--line)] hover:bg-white hover:text-[var(--foreground)] md:bg-transparent md:py-2"
               >
                 {item.label}

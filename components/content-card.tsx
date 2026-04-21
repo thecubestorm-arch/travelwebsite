@@ -20,7 +20,10 @@ export function ContentCard({
   comingSoon,
 }: ContentCardProps) {
   return (
-    <article className="section-shell group flex h-full flex-col justify-between rounded-[1.5rem] overflow-hidden sm:rounded-[1.75rem]">
+    <article className="section-shell group relative flex h-full flex-col justify-between rounded-[1.5rem] overflow-hidden transition-transform duration-200 hover:-translate-y-1 sm:rounded-[1.75rem]">
+      {!comingSoon && (
+        <Link href={href} className="absolute inset-0 z-10" aria-label={title} />
+      )}
       {thumbnail && (
         thumbnail.image ? (
           <div className="relative h-36 w-full shrink-0 overflow-hidden">
@@ -28,7 +31,7 @@ export function ContentCard({
               src={thumbnail.image}
               alt={thumbnail.imageAlt}
               fill
-              className="object-cover"
+              className="object-cover transition-transform duration-300 group-hover:scale-105"
               sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
             />
           </div>
@@ -58,12 +61,9 @@ export function ContentCard({
               Coming Soon
             </span>
           ) : (
-            <Link
-              href={href}
-              className="inline-flex min-h-11 items-center rounded-full border border-[var(--line)] bg-white/80 px-4 py-2 text-sm font-semibold text-[var(--foreground)] hover:-translate-y-0.5 hover:border-[var(--accent)] hover:text-[var(--accent)]"
-            >
+            <span className="relative z-20 inline-flex min-h-11 items-center rounded-full border border-[var(--line)] bg-white/80 px-4 py-2 text-sm font-semibold text-[var(--foreground)] group-hover:border-[var(--accent)] group-hover:text-[var(--accent)]">
               Read more
-            </Link>
+            </span>
           )}
         </div>
       </div>
