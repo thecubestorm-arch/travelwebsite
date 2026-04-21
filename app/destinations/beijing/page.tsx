@@ -6,7 +6,8 @@ import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { beijingSubpageCards } from "@/lib/content";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, buildArticleSchema } from "@/lib/seo";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata = buildMetadata({
   title: "Beijing",
@@ -38,6 +39,19 @@ const beijingSections = [
 export default function BeijingPage() {
   return (
     <LayoutWrapper className="space-y-12 py-12 sm:space-y-16 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildArticleSchema({
+              title: "Beijing",
+              description:
+                "The capital and cultural heart of China — history, architecture, and cuisine at every turn.",
+              url: `${siteConfig.url}/destinations/beijing`,
+            })
+          ),
+        }}
+      />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Destinations", href: "/destinations" }, { label: "Beijing" }]} />
       <PageIntro
         eyebrow="City Guide"

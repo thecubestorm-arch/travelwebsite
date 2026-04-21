@@ -4,7 +4,8 @@ import { CTASection } from "@/components/cta-section";
 import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
 import { Breadcrumb } from "@/components/breadcrumb";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, buildArticleSchema } from "@/lib/seo";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata = buildMetadata({
   title: "Plan Your Trip",
@@ -39,6 +40,19 @@ const planCards = [
 export default function PlanYourTripPage() {
   return (
     <LayoutWrapper className="space-y-12 py-12 sm:space-y-16 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildArticleSchema({
+              title: "Plan Your Trip",
+              description:
+                "Build your China itinerary with preplanned routes or create a custom trip with the travel planner.",
+              url: `${siteConfig.url}/plan-your-trip`,
+            })
+          ),
+        }}
+      />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Plan Your Trip" }]} />
       <PageIntro
         eyebrow="Plan Your Trip"

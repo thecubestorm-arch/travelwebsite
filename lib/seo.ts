@@ -40,3 +40,29 @@ export function buildMetadata({
     },
   };
 }
+
+export function buildArticleSchema({
+  title,
+  description,
+  url,
+  datePublished = "2024-01-01",
+}: {
+  title: string;
+  description: string;
+  url: string;
+  datePublished?: string;
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: title,
+    description,
+    url,
+    publisher: {
+      "@type": "Organization",
+      name: "Trail of China",
+      url: siteConfig.url,
+    },
+    datePublished,
+  };
+}

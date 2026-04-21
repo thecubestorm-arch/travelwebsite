@@ -5,7 +5,8 @@ import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { chinaBasicsCards } from "@/lib/content";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, buildArticleSchema } from "@/lib/seo";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata = buildMetadata({
   title: "China Basics",
@@ -23,6 +24,19 @@ export const metadata = buildMetadata({
 export default function ChinaBasicsPage() {
   return (
     <LayoutWrapper className="space-y-12 py-12 sm:space-y-16 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildArticleSchema({
+              title: "China Basics",
+              description:
+                "Everything you need to know before traveling to China — apps, internet access, cultural differences, and how to get around.",
+              url: `${siteConfig.url}/china-basics`,
+            })
+          ),
+        }}
+      />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "China Basics" }]} />
       <PageIntro
         eyebrow="China Basics"

@@ -4,7 +4,8 @@ import { LayoutWrapper } from "@/components/layout-wrapper";
 import { PageIntro } from "@/components/page-intro";
 import { Breadcrumb } from "@/components/breadcrumb";
 import { destinationCards } from "@/lib/content";
-import { buildMetadata } from "@/lib/seo";
+import { buildMetadata, buildArticleSchema } from "@/lib/seo";
+import { siteConfig } from "@/lib/site-config";
 
 export const metadata = buildMetadata({
   title: "Destinations",
@@ -16,6 +17,19 @@ export const metadata = buildMetadata({
 export default function DestinationsPage() {
   return (
     <LayoutWrapper className="space-y-12 py-12 sm:space-y-16 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(
+            buildArticleSchema({
+              title: "Destinations",
+              description:
+                "Compare destination options in China and choose cities that make sense for a first-time trip.",
+              url: `${siteConfig.url}/destinations`,
+            })
+          ),
+        }}
+      />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Destinations" }]} />
       <PageIntro
         eyebrow="Destinations"
