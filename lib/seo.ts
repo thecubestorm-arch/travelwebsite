@@ -45,12 +45,14 @@ export function buildArticleSchema({
   title,
   description,
   url,
-  datePublished = "2024-01-01",
+  datePublished,
+  dateModified,
 }: {
   title: string;
   description: string;
   url: string;
   datePublished?: string;
+  dateModified?: string;
 }) {
   return {
     "@context": "https://schema.org",
@@ -63,6 +65,12 @@ export function buildArticleSchema({
       name: "Trail of China",
       url: siteConfig.url,
     },
-    datePublished,
+    author: {
+      "@type": "Organization",
+      name: "Trail of China",
+      url: siteConfig.url,
+    },
+    ...(datePublished && { datePublished }),
+    ...(dateModified && { dateModified }),
   };
 }
